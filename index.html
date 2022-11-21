@@ -38,7 +38,7 @@
    <script src="./javascript/scripts.js"></script>
    <script src="./javascript/html2canvas.js"></script>
    <script>
-    document.getElementById("btn-download").onclick = () =>{
+    document.getElementById("btn-download").onclick= () =>{
          const screenshotPrint = document.querySelector("#downlabled")
          html2canvas(screenshotPrint).then((canvas) => {
             const base64Image = canvas.toDataURL("image/png")
