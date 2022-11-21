@@ -11,18 +11,22 @@
 </head>
 <body>
    <div class="container">
-    <div class="app"id="downlabled" >
+    <div class="app" >
+
         <div class="logo">
             <img src="pictures/logo.png" alt="logo">
         </div>
-        <div class="app-image">
+         <div id="downlabled"> 
+            <div class="app-image">
             <textarea name="" class="text-box" placeholder="Digite seu meme" aria-multiline="true"
             ></textarea>
             <div id="display-image"></div>
             <textarea name="" class="text-box" placeholder="Digite seu meme" aria-multiline="true"></textarea>
         </div>
+       
+        </div>
         <div class="app-photo-picker">
-            <select name="" id="memes-list"
+            <select id="memes-list"
             onchange="changeMemePicture(this.value)">
                  <option value="1">Selecione uma Imagem</option> 
             </select>
@@ -37,18 +41,23 @@
    </div>
    <script src="./javascript/scripts.js"></script>
    <script src="./javascript/html2canvas.js"></script>
+
    <script>
     document.getElementById("btn-download").onclick= () =>{
          const screenshotPrint = document.querySelector("#downlabled")
+
          html2canvas(screenshotPrint).then((canvas) => {
             const base64Image = canvas.toDataURL("image/png")
             let anchor= document.createElement("a")
-            anchor.setAttribute("href" , base64Image)
+            anchor.setAttribute("href", base64Image)
             anchor.setAttribute("download", "my-meme.png")
+            anchor.click()
             anchor.remove()
          })
     }
    
    </script>
+   <footer><p>&copy;TaísCarvalho</p> </footer>
 </body>
+
 </html>

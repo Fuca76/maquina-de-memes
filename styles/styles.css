@@ -83,3 +83,9 @@ textarea{
     font-family: sans-serif;
     color: black;
 }
+footer{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
